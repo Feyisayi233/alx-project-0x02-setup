@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const Header: React.FC = () => (
   <header className="bg-blue-600 text-white p-4 flex flex-col sm:flex-row items-center justify-between">
@@ -6,14 +6,14 @@ const Header: React.FC = () => (
     <nav className="mt-2 sm:mt-0">
       <ul className="flex gap-4">
         <li>
-          <a href="/home" className="hover:underline">
+          <Link href="/home" className="hover:underline">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="hover:underline">
+          <Link href="/about" className="hover:underline">
             About
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
