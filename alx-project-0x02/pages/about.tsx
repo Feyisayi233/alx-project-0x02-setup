@@ -1,7 +1,9 @@
+import Header from "@/components/layout/Header";
 import Button from "@/components/common/Button";
 
 const AboutPage = () => (
   <div className="flex flex-col items-center justify-center min-h-screen p-8">
+    <Header />
     <h1 className="text-3xl font-bold mb-4">About Page</h1>
     <p className="mb-6">This is the About page of ALX Project 2.</p>
     <div className="flex gap-4">

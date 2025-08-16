@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "@/components/layout/Header";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
 
@@ -18,6 +19,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8">
+      <Header />
       <h1 className="text-3xl font-bold mb-4">Home Page</h1>
       <button
         onClick={() => setIsModalOpen(true)}
