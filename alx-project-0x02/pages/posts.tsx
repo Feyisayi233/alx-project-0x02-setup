@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard";
 
@@ -9,25 +8,17 @@ interface ApiPost {
   body: string;
 }
 
-const PostsPage = () => {
-  const [posts, setPosts] = useState<ApiPost[]>([]);
-  const [loading, setLoading] = useState(true);
+interface PostsPageProps {
+  posts: ApiPost[];
+}
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-        setLoading(false);
-      });
-  }, []);
-
+const PostsPage = ({ posts }: PostsPageProps) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8">
       <Header />
       <h1 className="text-3xl font-bold mb-4">Posts Page</h1>
-      {loading ? (
-        <p>Loading posts...</p>
+      {posts.length === 0 ? (
+        <p>No posts found.</p>
       ) : (
         posts.map((post) => (
           <PostCard
@@ -41,5 +32,17 @@ const PostsPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch(
+    "https://jsonplaceholder.typicode.com/posts?_limit=10"
+  );
+  const posts = await res.json();
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default PostsPage;
