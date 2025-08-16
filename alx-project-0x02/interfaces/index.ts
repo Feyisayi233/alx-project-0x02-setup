@@ -5,6 +5,12 @@ export interface CardProps {
   content: string;
 }
 
+export interface PostProps {
+  title: string;
+  content: string;
+  userId: number;
+}
+
 export interface ButtonProps {
   children: React.ReactNode;
   size?: "small" | "medium" | "large";
