@@ -1,4 +1,4 @@
-import Card from "../components/common/Card";
+import Card from "@/components/common/Card";
 
 const HomePage = () => (
   <div className="flex flex-col items-center justify-center min-h-screen p-8">
