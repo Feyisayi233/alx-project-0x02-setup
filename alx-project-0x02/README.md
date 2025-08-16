@@ -1,20 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ALX Project 2
+
+This is a Next.js project scaffolded with TypeScript, Tailwind CSS, and ESLint.
+
+## Folder Structure
+
+- `components/layout/Header.tsx`: Header component
+- `interfaces/index.ts`: TypeScript interfaces
+- `public/assets/images/`: Image assets
+- `pages/index.tsx`: Main page with welcome message
 
 ## Getting Started
 
-First, run the development server:
+To run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev -- -p 3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
